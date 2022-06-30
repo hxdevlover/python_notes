@@ -1,0 +1,35 @@
+#+title: .reverse() returnes None
+
+* TABLE OF CONTENT :toc:
+- [[#printmylistreverse----none][print(mylist.reverse()) --> None]]
+  - [[#sort-and-reverse-a-list-temporarly][Sort and Reverse a list temporarly]]
+  - [[#reverse-a-list-temporarly][Reverse a list temporarly]]
+
+* print(mylist.reverse()) --> None
+If you want to print a list in reversed order and you do that by ~print(mylist.reverse())~, this will returne None as output. So do this instead:
+#+begin_src python
+mylist = ["london", "tokyo", "dubai", "tehran"]
+mylist.reverse() # Define it alone, then print it
+print(mylist)
+#+end_src
+Output will be ~['tehran', 'dubai', 'tokyo', 'london']~
+
+** Sort and Reverse a list temporarly
+Now If you want to reverse a list temporarly, just asign it to a vairable:
+#+begin_src python
+mylist = ["london", "tokyo", "dubai", "tehran"]
+Sorted_list = sorted(mylist)
+Sorted_list.reverse()
+print(Sorted_list) # sorted and reversed list
+print(mylist)      # original list
+#+end_src
+
+** Reverse a list temporarly
+If you want to reverse a list temporarly, just asign your list to a variable:
+#+begin_src python
+mylist = ["london", "tokyo", "dubai", "tehran"]
+Reversed_list = mylist
+Reversed_list.reverse()
+print(Reversed_list) # reversed list
+print(mylist)        # original list
+#+end_src
